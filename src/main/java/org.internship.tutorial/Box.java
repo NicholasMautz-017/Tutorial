@@ -45,6 +45,9 @@ public class Box {
         System.out.println("The volume is " + box.volume());
         System.out.println(box.getSizeDescription());
         System.out.println("The dimensions are" + " " + box2.length + " by " + box2.width + " by " + box2.height);
+        String[] array = {"Thing1","Thing2"};
+        box.putIntoBox(array);
+        box.reportStatus();
     }
     public void putIntoBox(String[] args) {
         contents = args;
@@ -65,6 +68,5 @@ public class Box {
     }
     public void reportStatus() {
         System.out.println("The box is" + " " + this.status + ".");
-
     }
 }
