@@ -12,10 +12,16 @@ public class Computer {
     String name;
     double price;
 
+
     public static void main(String[] args) {
        Computer computer = new Computer("Computer");
        computer.computerCost(330, 450, 95, 100);
        System.out.println(computer.price);
+       Computer computer2 = new Computer("Computer2");
+       computer2.computerCost(250, 500, 145, 150);
+       boolean isCheaper = computer.isCheaperThan(computer2);
+        System.out.println(isCheaper);
+        System.out.println(computer2.price);
     }
 
     public Computer(String name) {
@@ -26,4 +32,12 @@ public class Computer {
 
         return price;
     }
+    public boolean isCheaperThan(Computer otherComputer) {
+        if(price < otherComputer.price) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
 }
